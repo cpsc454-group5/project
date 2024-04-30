@@ -1,0 +1,163 @@
+body {
+    background-color: #6290C8;
+    color: #1D3461;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.vl {
+    border-left: 2px solid #1D3461;
+    height: auto;
+    padding-right: .5rem;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.digSize {
+    width: 3rem;
+}
+
+.nSize {
+    width: 10rem;
+}
+
+.liTitle {
+    min-width: 3rem;
+}
+
+.reserveList {
+    background-color: #376996;
+    width: 80%;
+    height: 75%;
+    padding: 2rem;
+}
+
+.reservedList {
+    background-color: #376996;
+    width: 80%;
+    height: 85%;
+    padding: 2rem;
+}
+
+li {
+    background-color: #829CBC;
+    border-block: 1px outset #1D3461;
+    padding: .25rem;
+    list-style-type: none;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ratcage {
+    text-align: center;
+}
+
+.intro {
+    border-top: 2px solid #1D3461;
+    border-bottom: 2px solid #1D3461;
+    border-radius:16px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.intro h1 {
+    border-block-end: 3px solid #1D3461;
+}
+
+.intro p {
+    border-block-start: 2px solid #1D3461;
+    border-block-end: 2px solid #1D3461;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.outset {
+    border-style: outset;
+    border-color: #1D3461;
+}
+
+.reserve {
+    width: 80%;
+    background-color: #376996;
+    padding: 2rem;
+}
+
+.header {
+    border-block-end: 1px solid #1D3461;
+    background-color: #376996;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3.3rem;
+    padding-inline: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.header a {
+    text-align: center;
+    color: #1D3461;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header a:hover {
+    background-color: #829CBC;
+}
+
+.contentRow {
+    background-color: #829CBC;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentCol {
+    background-color: #829CBC;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.footer {
+    border-block-start: 1px solid #1D3461;
+    background-color: #6290C8;
+    height: 5%;
+    align-items: center;
+    display: flex;
+}
+
+.footer a {
+    text-align: center;
+    color: #1D3461;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer p {
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: auto;
+}
