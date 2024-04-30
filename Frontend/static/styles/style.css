@@ -105,7 +105,6 @@ li {
     gap: 0.5rem;
     height: 3.3rem;
     padding-inline: 0.5rem;
-    overflow: hidden;
     display: flex;
 }
 
@@ -123,7 +122,6 @@ li {
 .contentRow {
     background-color: #829CBC;
     padding: 10px;
-    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
