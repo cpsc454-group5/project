@@ -9,7 +9,7 @@ CREATE TABLE Books (
 -- Sample data
 INSERT INTO Books (book_id,book_name, book_author, book_filename) VALUES
 (1,'Pride and Prejudice', 'Jane Austen', 'pride_and_prejudice.txt'),
-(2,'To Kill a Mockingbird', 'Harper Lee', 'to_kill_a_mockingbird.txt'),
+(2,'To Kill a Mockingbird', 'Harper Lee', 'to_kill_a_mockingbird.pdf'),
 (3,'1984', 'George Orwell', '1984.txt'),
 (4,'The Great Gatsby', 'F. Scott Fitzgerald', 'the_great_gatsby.txt');
 

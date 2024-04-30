@@ -6,6 +6,7 @@ import datetime
 import sqlite3
 
 app = Flask(__name__)
+STORAGE_SERVER_URL = "http://localhost:8007" #To be updated using vagrant defined host/IP
 
 # Function to generate an expiring token
 def generate_token():
@@ -50,7 +51,7 @@ def request_book_link():
         return {"success": "false","reserved_by":escape(check[0])}
     token, expiration = generate_token()
     store_token_in_database(token, expiration, user_name, book_id)
-    link = f"/books/{book_id}?token={token}"
+    link = f"{STORAGE_SERVER_URL}/books/{book_id}?token={token}"
     return {"success":"true","link":link}
 
 # API endpoint to verify token and bookid
