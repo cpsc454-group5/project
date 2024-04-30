@@ -17,6 +17,7 @@ CREATE TABLE Tokens (
     token_id INTEGER PRIMARY KEY,
     token VARCHAR(255),
     expiration DATETIME,
+    user_name VARCHAR(255),
     book_id INTEGER,
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
