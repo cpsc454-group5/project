@@ -21,4 +21,4 @@ def retrieve_book(book_id):
         return jsonify({"error": "Invalid token or book ID"})
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=8007)
+    serve(app,listen='*:8007')
