@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChapterCheese</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
 <body>
     <div class="header">
-        <a href="./index.html">
+        <a href="/">
             Main Page
         </a>
-        <a href="./reserve.html">Reserve Book</a>
-        <a href="./reservations.html">Active Reservations</a>
+        <a href="/reserve">Reserve Book</a>
+        <a href="/reservations">Active Reservations</a>
     </div>
     <div class="contentRow">
         <div class="ratCage">
-            <img src="rat.png">
+            <img src="{{ url_for('static',filename='rat.png') }}">
         </div>
         <div class="intro">
             <h1>Chapter Cheese</h1>
