@@ -8,6 +8,17 @@ body {
     font-family: sans-serif;
 }
 
+.darkmode {
+    --clr-light: #fdffc4;
+    --clr-dark: #00332a;
+    --clr-primary: #202302;
+    --clr-secondary: #00100d;
+    --clr-accent: #ff7750;
+  
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+}
+
 img {
     max-width: 100%;
     margin: auto;
@@ -43,10 +54,10 @@ img {
     padding: 2rem;
 }
 
-.reservedList {
-    background-color: #376996;
+.reserveList_dark {
+    background-color: black;
     width: 80%;
-    height: 85%;
+    height: 75%;
     padding: 2rem;
 }
 
@@ -98,6 +109,12 @@ li {
     padding: 2rem;
 }
 
+.reserve_dark {
+    width: 80%;
+    background-color: black;
+    padding: 2rem;
+}
+
 .header {
     border-block-end: 1px solid #1D3461;
     background-color: #376996;
@@ -108,7 +125,25 @@ li {
     display: flex;
 }
 
+.header_dark {
+    border-block-end: 1px solid #1D3461;
+    background-color: black;
+    align-items: center;
+    gap: 0.5rem;
+    height: 3.3rem;
+    padding-inline: 0.5rem;
+    display: flex;
+    color: white;
+}
+
 .header a {
+    text-align: center;
+    color: #1D3461;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header_dark a {
     text-align: center;
     color: #1D3461;
     padding: 14px 16px;
@@ -126,6 +161,18 @@ li {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+   
+}
+
+
+.contentRow_dark {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+     color: white;
 }
 
 .contentCol {
@@ -138,9 +185,27 @@ li {
     justify-content: start;
 }
 
+.contentCol_dark {
+    background-color: black;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+}
+
 .footer {
     border-block-start: 1px solid #1D3461;
     background-color: #6290C8;
+    height: 5%;
+    align-items: center;
+    display: flex;
+}
+
+.footer_dark {
+    border-block-start: 1px solid #1D3461;
+    background-color: black;
     height: 5%;
     align-items: center;
     display: flex;
