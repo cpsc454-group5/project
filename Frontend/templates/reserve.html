@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserve Book</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <script src="../scripts/themeScript.js"></script>
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header">
         <a href="/">
             Main Page
         </a>
         <a href="/reserve">Reserve Book</a>
         <a href="/reservations">Active Reservations</a>
+        <div class="push"></div>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </div>
-    <div class="contentCol">
-        <ul class="reserveList outset">
+    <div id="contentCol" class="contentCol">
+        <ul id="reserveList" class="reserveList outset">
             <li>
                 <div class="liTitle">
                     Title: 
@@ -62,7 +65,7 @@
                 </div>
             </li>
         </ul>
-        <form class="reserve outset" action="./actionThing" method="post">
+        <form id="reserve" class="reserve outset" action="./actionThing" method="post">
             <label for="fName">First Name</label>
             <input type="text" name="fName" id="fName">
             <label for="lName">Last Name</label>
@@ -75,7 +78,7 @@
             <input type="submit" value="Reserve">
         </form>
     </div>
-    <div class="footer">
+    <div id="footer" class="footer">
         <a href="legal.html">
             Tmp
         </a>
@@ -83,5 +86,22 @@
             Feet
         </p>
     </div>
+    <script src="../static/styles/themeScript.js"></script>
+    <script>
+
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        initiateTheme();
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Light Mode';
+                swtichToDarkMode_reserve();
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+                switchToLightMode_reserve();
+            }
+        });
+    </script>
 </body>
 </html>
