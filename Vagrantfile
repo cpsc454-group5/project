@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
     frontend.vm.provision "shell", inline: <<-SHELL
       sudo apt-get update
       sudo apt-get install -y python3 python3-pip
-      sudo pip3 install flask waitress
+      sudo pip3 install flask waitress requests
       python3 /home/vagrant/frontend/app.py &
     SHELL
   end
