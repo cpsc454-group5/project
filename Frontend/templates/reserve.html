@@ -19,61 +19,16 @@
     </div>
     <div id="contentCol" class="contentCol">
         <ul id="reserveList" class="reserveList outset">
-            <li>
-                <div class="liTitle">
-                    Title: 
-                </div>
-                <div>
-                    Art of War
-                </div>
-                <div class="vl push"></div>
-                <div>
-                    Reservable copies: 
-                </div>
-                <div class="digSize">
-                    14 
-                </div>
-            </li>
-            <li>
-                <div class="liTitle">
-                    Title: 
-                </div>
-                <div>
-                    The King in Yellow
-                </div>
-                <div class="vl push"></div>
-                <div>
-                    Reservable copies: 
-                </div>
-                <div class="digSize">
-                    6
-                </div>
-            </li>
-            <li>
-                <div class="liTitle">
-                    Title: 
-                </div>
-                <div>
-                    It
-                </div>
-                <div class="vl push"></div>
-                <div>
-                    Reservable copies: 
-                </div>
-                <div class="digSize">
-                    76
-                </div>
-            </li>
+            {{ books | safe }}
         </ul>
-        <form id="reserve" class="reserve outset" action="./actionThing" method="post">
+        <form id="reserve" class="reserve outset" action="./makeReserve" method="get">
             <label for="fName">First Name</label>
             <input type="text" name="fName" id="fName">
             <label for="lName">Last Name</label>
             <input type="text" name="lName" id="lName">
             <label for="bookTitle">Book</label>
             <select name="bookTitle" id="bookTitle">
-                <option value="Art of War">Art of War</option>
-                <option value="Big name">eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>
+                {{ available | safe }}
             </select>
             <input type="submit" value="Reserve">
         </form>
