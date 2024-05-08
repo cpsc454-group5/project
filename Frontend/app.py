@@ -3,7 +3,7 @@ import requests
 from waitress import serve
 
 app = Flask(__name__)
-BACKEND_URL = "http://localhost:8005" #To be updated using vagrant defined host/IP
+BACKEND_URL = "http://database" #To be updated using vagrant defined host/IP
 
 #Routes to serve the main pages
 @app.route('/')
@@ -29,7 +29,7 @@ def reserve():
 
 @app.route('/reservations')
 def reservations():
-    resp = requests.request('GET', BACKEND_URL + '/list?count=' + f'10')
+    resp = requests.get(BACKEND_URL + '/list?count=10')
     bookList = ''
     for book in resp.json()['books']:
         if book['reserved_by'] != None:
@@ -48,9 +48,10 @@ def reserveBook():
     lName = request.args.get('lName')
     fullName = fName + '%20' + lName
     bookInfo = request.args.get('bookTitle').split(',')
-    resp = requests.request('GET', BACKEND_URL + f'/request?bookid={bookInfo[0]}&username={fullName}')
-    print(resp)
-    return redirect('/reservations')
+    resp = requests.request('GET', BACKEND_URL + f'/request?bookid={bookInfo[0]}&username={fullName}').json()
+    if resp['success']=='true':
+        return redirect(resp['link'])
+    else: return "ERROR: Could not reserve book"
 
 if __name__ == '__main__':
-    serve(app,listen='*:8008')
+    serve(app,listen='*:80')

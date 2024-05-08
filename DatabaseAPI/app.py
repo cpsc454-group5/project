@@ -6,7 +6,7 @@ import datetime
 import sqlite3
 
 app = Flask(__name__)
-STORAGE_SERVER_URL = "http://localhost:8007" #To be updated using vagrant defined host/IP
+STORAGE_SERVER_URL = "http://storage" #To be updated using vagrant defined host/IP
 
 # Function to generate an expiring token
 def generate_token():
@@ -102,4 +102,4 @@ def list_books():
 
 
 if __name__ == '__main__':
-    serve(app,listen='*:8005')
+    serve(app,listen='*:80')
